@@ -2,6 +2,7 @@ const computerChoiceDisplay = document.getElementById("computer-choice");
 const yourChoiceDisplay = document.getElementById("your-choice");
 const resultDisplay = document.getElementById("result");
 const possibleChoices = document.querySelectorAll(".button");
+const refreshDisplay = document.querySelector(".refresh-button");
 let userChoice
 let computerChoice
 let result
@@ -53,3 +54,12 @@ function getResult() {
     }
     resultDisplay.innerHTML = result
 }
+
+refreshDisplay.addEventListener("click", (refresh) => {
+    refreshComputerChoiceDisplay = " "
+    refreshYourChoiceDisplay = " "
+    refreshResultDisplay = " "
+    computerChoiceDisplay.innerHTML = refreshComputerChoiceDisplay
+    yourChoiceDisplay.innerHTML = refreshYourChoiceDisplay 
+    resultDisplay.innerHTML = refreshResultDisplay
+})
